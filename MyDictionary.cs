@@ -17,11 +17,11 @@ namespace MyDictionary
         {
             get 
             {
-                return valuesArray[FindIndex(i)];
+                return valuesArray[GetIndex(i)];
             }
             set
             {
-                valuesArray[FindIndex(i)] = value;
+                valuesArray[GetIndex(i)] = value;
             }
         }
         public void Add(TKey keyItem, TValue valueitem)
@@ -35,7 +35,7 @@ namespace MyDictionary
             keysArray[keysArray.Length - 1] = keyItem;
             valuesArray[valuesArray.Length - 1] = valueitem;
         }
-        private int FindIndex(TKey i)
+        private int GetIndex(TKey i)
         {
             int j = 0;
             for (; j < keysArray.Length; j++)
